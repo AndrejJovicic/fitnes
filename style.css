@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    overflow: hidden;
+}
+
+/* GLAVNI KONTEJNER */
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.left-side{
+    width: 100%;
+    height: 100vh;
+
+    /* VRACENA ORIGINAL POZADINA */
+    background: url("https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop") center/cover no-repeat;
+
+    position: relative;
+}
+
+/* TAMNI OVERLAY */
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+}
+
+/* LOGO */
+.logo{
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    z-index: 2;
+}
+
+.logo h1{
+    color: white;
+    font-size: 48px;
+}
+
+/* CENTRALNI TEKST */
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.content h2{
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.content p{
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.content button{
+    padding: 14px 40px;
+    border: none;
+    background: orange;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.content button:hover{
+    background: #ffbf47;
+}
+
+/* FOOTER */
+.footer{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+/* DESNI PANEL */
+.right-side{
+    position: absolute;
+    top: 0;
+    right: -400px;
+
+    width: 350px;
+    height: 100vh;
+
+    background: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.5s ease;
+    z-index: 5;
+}
+
+/* AKTIVAN PANEL */
+.right-side.active{
+    right: 0;
+}
+
+/* X DUGME */
+.close-btn{
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* FORMA */
+.form-box{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-box h2{
+    color: white;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.form-box input{
+    padding: 14px;
+    margin-bottom: 18px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.form-box button{
+    padding: 14px;
+    border: none;
+    background: orange;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-box button:hover{
+    background: #ffbf47;
+}
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 25px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 10;
+}
+
+/* LEVA STRANA */
+.nav-left h1{
+    color: white;
+    font-size: 42px;
+}
+
+/* DESNA STRANA */
+.nav-right{
+    display: flex;
+    gap: 35px;
+}
+
+.nav-right a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-right a:hover{
+    color: orange;
+}

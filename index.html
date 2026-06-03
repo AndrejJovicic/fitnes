@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- LEVA STRANA -->
+        <div class="left-side">
+
+            <div class="overlay"></div>
+
+          <nav class="navbar">
+
+    <div class="nav-left">
+        <h1>FitLife</h1>
+    </div>
+
+    <div class="nav-right">
+        <a href="fitnes.html">Početna</a>
+        <a href="usluge.html">Usluge</a>
+        <a href="kontakt.html">Kontakt</a>
+    </div>
+
+</nav>
+
+            <div class="content">
+                <h2>Postani najbolja verzija sebe</h2>
+                <p>Treniraj pametno. Živi zdravo.</p>
+
+                <button id="openBtn">Prijavi se</button>
+            </div>
+
+            <div class="footer">
+                <p>© 2026 FitLife Studio</p>
+            </div>
+
+        </div>
+
+        <!-- SLIDE PRIJAVA -->
+        <div class="right-side" id="loginPanel">
+
+            <span class="close-btn" id="closeBtn">×</span>
+
+            <div class="form-box">
+                <h2>Prijava</h2>
+
+                <input type="text" placeholder="Ime">
+                <input type="email" placeholder="Email">
+
+                <button>Pošalji</button>
+            </div>
+
+        </div>
+
+    </div>
+
+<script>
+
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.getElementById("closeBtn");
+const loginPanel = document.getElementById("loginPanel");
+
+openBtn.addEventListener("click", () => {
+    loginPanel.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+    loginPanel.classList.remove("active");
+});
+
+</script>
+
+</body>
+</html>
